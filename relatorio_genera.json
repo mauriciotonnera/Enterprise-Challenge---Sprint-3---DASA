@@ -1,0 +1,24 @@
+{
+  "usuario": {
+    "nome": "João Silva",
+    "idade": 30
+  },
+  "ancestralidade": {
+    "europeia": 60,
+    "africana": 30,
+    "indigena": 4,
+    "asiatica": 0
+  },
+  "predisposicoes": [
+    {
+      "condicao": "Intolerância à lactose",
+      "risco": "Moderado",
+      "descricao": "Foram encontradas variantes associadas à intolerância à lactose, o que pode indicar uma predisposição para essa condição. Recomenda-se consultar um profissional de saúde para avaliação e orientações específicas."
+    },
+    {
+      "condicao": "Sensibilidade ao glúten",
+      "risco": "Baixo",
+      "descricao": "Não foram encontradas variantes associadas à sensibilidade ao glúten, indicando um risco baixo para essa condição. No entanto, é importante monitorar sintomas relacionados ao consumo de glúten e consultar um profissional de saúde se necessário."
+    }
+  ]
+}
