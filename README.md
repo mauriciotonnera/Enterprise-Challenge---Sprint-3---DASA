@@ -1,7 +1,7 @@
 # GeneraAI — Sprint 3: Experiência do Usuário
 
 Projeto acadêmico para o Challenge Dasa/Genera — Sprint 3 (Experiência do Usuário).
-Evolui o protótipo de RAG construído na [Sprint 2](../sprint2) para um produto utilizável: um
+Evolui o protótipo de RAG construído na Sprint 2 para um produto utilizável: um
 dashboard com o resumo do perfil genético e os indicadores de risco, um assistente que
 personaliza e simplifica suas respostas mantendo fidelidade ao relatório, resumos automáticos
 e salvaguardas de comunicação responsável.
