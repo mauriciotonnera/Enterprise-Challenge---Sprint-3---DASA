@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GeneraAI — Painel do Paciente</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="topo">
+  <div class="topo-conteudo">
+    <h1>GeneraAI</h1>
+    <p class="subtitulo">Seu perfil genético, explicado de forma clara</p>
+  </div>
+</header>
+
+<nav class="abas" role="tablist" aria-label="Seções do perfil genético">
+  <button class="aba-botao is-ativa" role="tab" aria-selected="true" aria-controls="painel-visao" data-aba="visao">Visão geral</button>
+  <button class="aba-botao" role="tab" aria-selected="false" aria-controls="painel-riscos" data-aba="riscos">Indicadores de risco</button>
+  <button class="aba-botao" role="tab" aria-selected="false" aria-controls="painel-assistente" data-aba="assistente">Assistente</button>
+  <button class="aba-botao" role="tab" aria-selected="false" aria-controls="painel-historico" data-aba="historico">Histórico</button>
+</nav>
+
+<main class="conteudo">
+
+  <section id="painel-visao" class="painel is-ativo" role="tabpanel">
+    <div class="cartao perfil-cartao">
+      <div>
+        <h2 id="perfil-nome">—</h2>
+        <p id="perfil-idade" class="texto-suave"></p>
+      </div>
+      <form id="form-perfil" class="perfil-form">
+        <label>
+          Nome
+          <input type="text" id="input-nome" name="nome" />
+        </label>
+        <label>
+          Idade
+          <input type="number" id="input-idade" name="idade" min="0" />
+        </label>
+        <label>
+          Linguagem preferida
+          <select id="input-nivel" name="nivel_linguagem">
+            <option value="leigo">Simples (recomendado)</option>
+            <option value="tecnico">Técnica</option>
+          </select>
+        </label>
+        <button type="submit">Salvar preferências</button>
+      </form>
+    </div>
+
+    <div class="cartao">
+      <h3>Resumo automático do relatório</h3>
+      <p id="resumo-relatorio-texto" class="texto-carregando">Gerando resumo…</p>
+      <span id="resumo-relatorio-metodo" class="selo"></span>
+    </div>
+
+    <div class="cartao">
+      <h3>Ancestralidade genética</h3>
+      <div id="ancestralidade-barras" class="barras"></div>
+    </div>
+
+    <p class="disclaimer">As informações desta página são educacionais e não substituem avaliação de médicos, nutricionistas ou geneticistas.</p>
+  </section>
+
+  <section id="painel-riscos" class="painel" role="tabpanel" hidden>
+    <h2>Indicadores de risco</h2>
+    <p class="texto-suave">Predisposições identificadas no relatório. Risco não é diagnóstico.</p>
+    <div id="cards-riscos" class="grade-cards"></div>
+    <p class="disclaimer">Predisposição genética indica uma possibilidade, não uma certeza. Converse com um profissional de saúde sobre esses resultados.</p>
+  </section>
+
+  <section id="painel-assistente" class="painel" role="tabpanel" hidden>
+    <h2>Assistente GeneraAI</h2>
+    <div class="chat-controles">
+      <label>
+        Responder em linguagem
+        <select id="chat-nivel">
+          <option value="leigo">Simples</option>
+          <option value="tecnico">Técnica</option>
+        </select>
+      </label>
+    </div>
+    <div id="chat" class="chat" aria-live="polite"></div>
+    <form id="form-chat" class="chat-form">
+      <input type="text" id="chat-input" placeholder="Digite sua pergunta sobre o relatório genético..." autocomplete="off" />
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="disclaimer">As respostas são informativas e não substituem avaliação médica profissional.</p>
+  </section>
+
+  <section id="painel-historico" class="painel" role="tabpanel" hidden>
+    <h2>Histórico de interações</h2>
+    <div class="cartao">
+      <h3>Resumo automático das suas perguntas</h3>
+      <p id="resumo-interacoes-texto" class="texto-carregando">Carregando…</p>
+      <span id="resumo-interacoes-metodo" class="selo"></span>
+    </div>
+    <div id="lista-historico" class="lista-historico"></div>
+  </section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
